@@ -1,0 +1,34 @@
+<form [formGroup]="loginForm"  (ngSubmit)="onSubmit()" >
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Name" formControlName="name"  name="name" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" formControlName="email" name="email" type="email" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Mobile Number</mat-label>
+      <input matInput placeholder="Mobile Number" formControlName="phone" name="mobile" type="text" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput placeholder="Password" name="password" formControlName="password"  type="password" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>ID</mat-label>
+      <input matInput placeholder="ID" formControlName="id" type="number"   name="id" required>
+    </mat-form-field>
+    <h4>Select Role</h4>
+          <mat-form-field style="width: 100%;">
+            <mat-label>roles</mat-label>
+            <select matNativeControl required #roleSelect name="role"  formControlName="role">
+              <option value="Admin">Admin</option>
+              <option value="User">User</option>
+              <option value="Manager">Manager</option>
+              <option value="Clerk">Clerk</option>
+            </select>
+          </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add User</button>
+  </form>
+  

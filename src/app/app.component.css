@@ -1,0 +1,12 @@
+.navbar {
+justify-content: center;
+gap: 1%;
+background-color:rgb(78, 72, 76);
+}
+.navbar1 {
+    color:rgb(247, 243, 243);
+    display: inline;
+    margin-left: 20px;
+    font-size: medium;
+    font-family: serif;
+}

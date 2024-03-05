@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm"  (ngSubmit)="onSubmit()" >
+    <mat-form-field>
+      <mat-label>ProductId</mat-label>
+      <input matInput placeholder="ProductId" formControlName="productId" name="ProductId" type="number" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>ProductName</mat-label>
+      <input matInput placeholder="ProductName" formControlName="productName" name="ProductName" type="text" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="Price" formControlName="price" name="Price" type="number" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>suplierName</mat-label>
+      <input matInput placeholder="suplierName" formControlName="suplierName" name="suplierName" type="text" required>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add Product</button>
+  </form>
+  

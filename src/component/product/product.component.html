@@ -1,0 +1,47 @@
+<section class="container1">
+
+    <div class="inercontainer">
+  <div class="container2"><div class="comments" style="color: aliceblue;text-shadow: rgb(205, 166, 166);">Product Page</div><a *ngIf="canAddProduct()"  class="add-btn" href="javascript:void(0);" (click)="addProduct()">Add Product</a></div>
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+          <ng-container matColumnDef="ProductId">
+            <th mat-header-cell *matHeaderCellDef>ProductId</th>
+            <td mat-cell *matCellDef="let element"> {{element.productId}} </td>
+          </ng-container>
+          <ng-container matColumnDef="ProductName">
+            <th mat-header-cell *matHeaderCellDef>ProductName</th>
+            <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Price">
+            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+          </ng-container>
+          <ng-container matColumnDef="suplierName">
+            <th mat-header-cell *matHeaderCellDef>  suplierName</th>
+            <td mat-cell *matCellDef="let element"> {{element.suplierName}} </td>
+          </ng-container>
+          <ng-container matColumnDef="action" *ngIf="canAddProduct()">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element"><a href="javascript:void(0);" (click)="editProduct(element)"
+                style="text-decoration: none; color: aqua;">Edit</a></td>
+          </ng-container>
+          <ng-container matColumnDef="delete" *ngIf="canAddProduct()">
+            <th mat-header-cell *matHeaderCellDef>Action</th>
+            <td mat-cell *matCellDef="let element"><a href="javascript:void(0);" (click)="deleteProduct(element)"
+                style="text-decoration: none; color: rgb(217, 38, 38);">Delete</a></td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+        </table>
+  
+        <mat-paginator [length]='pageLength' [pageIndex]="0" [pageSizeOptions]="[3,5]" (page)="onPageChange($event)">
+        </mat-paginator>
+      </div>
+  
+    </div>
+  
+  
+  
+  </section>

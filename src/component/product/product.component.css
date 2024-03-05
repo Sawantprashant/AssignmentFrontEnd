@@ -1,0 +1,44 @@
+.container1{
+    margin: 0px;
+    width:100%;
+    height: calc(100vh - 36px);
+    background: linear-gradient(to right, #191a1a, #ebeff0);
+    display: flex;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    
+}
+.inercontainer{
+   display: flex;
+    position: relative;
+    width: 80%;
+    margin: 5%;
+    gap: 10%;
+    flex-direction: column;
+}
+.container2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.component{
+    display: flex;
+    justify-content: space-between;
+}
+.content{
+    color: antiquewhite;
+}
+.btn{
+    color: cadetblue;
+}
+.comments{
+    font-size:large;
+}
+.add-btn{
+    color: rgb(216, 34, 34);
+    font-size: large;
+    text-decoration: solid;
+}

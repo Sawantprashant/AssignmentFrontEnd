@@ -1,0 +1,50 @@
+<div class="content">
+  <section class='login' id='login'>
+    <div class='head'>
+      <h1 class='company'>Managment System</h1>
+    </div>
+   
+      <!--Form-->
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div style="width: 100%;">
+          <input type="text" formControlName="username" placeholder='Username' class='text' id='username' required>
+          <div *ngIf="loginForm.get('username')!.hasError('required') && loginForm.get('username')!.touched"
+            style='color:rgb(243, 191, 191)'>UserName is required</div>
+          <div *ngIf="loginForm.get('username')!.hasError('pattern')&& loginForm.get('username')!.touched"
+            style='color:rgb(243, 191, 191)'>Enter Correct Gmail</div>
+        </div>
+
+        <!--password-->
+        <div style="width: 100%;">
+          <input type="password" formControlName="password" placeholder='••••••••••••••' class='password'>
+          <div *ngIf="loginForm.get('password')!.hasError('required') && loginForm.get('password')!.touched"
+            style='color:rgb(243, 191, 191)'>Password is required</div>
+        </div>
+        <div></div>
+        <!--DropDown-->
+        <div style="width: 100%;">
+          <h4>Select Role</h4>
+          <mat-form-field style="width: 100%;">
+            <mat-label>roles</mat-label>
+            <select matNativeControl required #roleSelect name="role" formControlName="role">
+              <option value="Admin">Admin</option>
+              <option value="User">User</option>
+              <option value="Manager">Manager</option>
+              <option value="Clerk">Clerk</option>
+            </select>
+          </mat-form-field>
+
+        </div>
+        <!--signin button-->
+        <div class="btnClass">
+          <input type="submit" class="btn-login" value="Login" [disabled]="!loginForm.valid"
+            [style.cursor]="loginForm.valid ? '' : 'not-allowed'" />
+
+        </div>
+      </form>
+   
+  </section>
+  <footer>
+    <p>Fusion stak</p>
+  </footer>
+</div>

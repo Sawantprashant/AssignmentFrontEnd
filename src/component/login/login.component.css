@@ -1,0 +1,110 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+ }
+ .content{
+    position: relative;
+    height: calc(100vh - 36px);
+    background: linear-gradient(to top,rgb(129, 237, 239), #9070cf,rgb(78, 72, 76));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .login {
+    color: white;
+    background:#b3dded;
+    background: 
+      -webkit-linear-gradient(to right, #ccf3ef, #c8e8f4);
+    background: 
+      linear-gradient(to right, #9f768d, #7c989f);
+   
+    box-shadow: 
+      0px 2px 10px rgba(0,0,0,0.2), 
+      0px 10px 20px rgba(0,0,0,0.3), 
+      0px 30px 60px 1px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 20px;
+    width: 30vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: column;
+   gap: 50px;
+
+  }
+  .head {
+    position: relative;
+    color: chartreuse;
+    text-align: center;
+    width: 100%;
+
+    }
+.company {
+    font-size: 2vw;
+    text-align: center;
+ }
+  form{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+  }
+    input[type=text].text {
+    border: none;
+    background: none;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+  color: white;
+    font-size: small;
+    outline: none;
+   
+  }
+  .text::placeholder {
+    color: white;
+    position: relative;
+  }
+  input[type=password].password {
+    border: none;
+    background: none;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    position: relative;
+  }
+ .password::placeholder {
+    color: #D3D3D3;
+  }
+.btn-login {
+  border: none;
+  background: none;
+    text-decoration: none;
+    color: white;   
+    border-radius: 3px;
+    transition: 0.5s;
+    color: chartreuse;
+  }
+
+  footer {
+    display: flex;
+    position: absolute;
+    background-color:rgb(205, 242, 243);
+    justify-content: center;
+    align-items:baseline;
+    width: 100vw;
+    bottom: 0px;
+
+  }
+  
+  footer p {
+    position: relative;
+    color:black;
+    text-decoration: none;
+   bottom: 0px;
+  }
+ 

@@ -1,0 +1,47 @@
+<section class="container1">
+
+  <div class="inercontainer">
+    <div class="container2"> <div class="comments">User Page </div>
+    <a class="add-btn" href="javascript:void(0);" *ngIf="canAddUser()" (click)="addUser()">Add User</a>
+  </div>
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action" *ngIf="canAddUser()">
+          <th mat-header-cell *matHeaderCellDef>Action</th>
+          <td mat-cell *matCellDef="let element"><a href="javascript:void(0);" (click)="editUser(element)"
+              style="text-decoration: none; color: aqua;">Edit</a></td>
+        </ng-container>
+        <ng-container matColumnDef="delete" *ngIf="canAddUser()">
+          <th mat-header-cell *matHeaderCellDef>Action</th>
+          <td mat-cell *matCellDef="let element"><a href="javascript:void(0);" (click)="deleteUser(element)"
+              style="text-decoration: none; color: rgb(217, 38, 38);">Delete</a></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      </table>
+
+      <mat-paginator [length]="pageLength" [pageSize]="3" [pageSizeOptions]="[3,5]" (page)="onPageChange($event)">
+      </mat-paginator>
+    </div>
+
+  </div>
+
+
+
+</section>
